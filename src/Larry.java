@@ -1,8 +1,10 @@
 public class Larry extends Car {
     private int lifting;
+    public static int count;
     public Larry(int weight, int power, String marka,int lifting){
         super(weight,power,marka);
         this.lifting = lifting;
+        count++;
     }
     public void setLifpMark(String marka, int lifting){
         super.setMarka(marka);
@@ -19,6 +21,8 @@ public class Larry extends Car {
         return "marka: " + super.getMarka() + "\n" +
                 "power: " + super.getPower() + "\n" +
                 "weight: " + super.getWeight() + "\n" +
-                "lifting: " + lifting;
+                "lifting: " + lifting+
+                "Колличество"+count;
+
     }
 }
